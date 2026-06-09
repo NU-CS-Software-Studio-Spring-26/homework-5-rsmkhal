@@ -122,7 +122,7 @@ Clicking the toggle on `/todos` issued a `PATCH /todos/1/toggle_priority` reques
 
 ### Pull request
 
-PR (hw5 → main): _added after opening the PR below._
+PR (hw5 → main): https://github.com/NU-CS-Software-Studio-Spring-26/homework-5-rsmkhal/pull/1
 
 ---
 
@@ -133,4 +133,4 @@ PR (hw5 → main): _added after opening the PR below._
 - [x] Links to `AGENTS.md`, `.cursor/rules/rails-conventions.mdc`, `.cursor/rules/security.mdc`
 - [x] Part 3: Ask-mode prompt/results, Plan-mode result + my edits, Agent-mode prompt + commit link, bad → good rewrite
 - [x] Part 4: Turbo Streams explanation + what I verified against the handbook/source
-- [x] Part 4 pull request URL with Story / Plan / Tests / Things I rejected
+- [x] Part 4 pull request URL with Story / Plan / Tests / Things I rejected: https://github.com/NU-CS-Software-Studio-Spring-26/homework-5-rsmkhal/pull/1
