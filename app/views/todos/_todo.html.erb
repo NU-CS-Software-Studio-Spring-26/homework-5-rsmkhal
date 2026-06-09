@@ -4,4 +4,12 @@
     <%= todo.description %>
   </p>
 
+  <p>
+    <strong>Priority:</strong>
+    <%= button_to todo.high_priority? ? "★ High priority" : "☆ Normal",
+                  toggle_priority_todo_path(todo),
+                  method: :patch,
+                  class: "todo-priority-toggle" %>
+  </p>
+
 </div>
