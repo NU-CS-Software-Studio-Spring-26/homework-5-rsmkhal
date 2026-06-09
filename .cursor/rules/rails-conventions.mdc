@@ -1,0 +1,16 @@
+---
+description: Rails 8 conventions for the sample todo app
+alwaysApply: true
+---
+
+# Rails 8 conventions for the sample todo app
+
+- Prefer **Turbo Streams** (`format.turbo_stream` + a matching `*.turbo_stream.erb` view) over hand-written/custom JavaScript for partial-page updates.
+- Use **Stimulus controllers** in `app/javascript/controllers/` for client behavior; never write inline `<script>` or `onclick` in ERB.
+- Keep migrations **reversible** (use `change` or matching `up`/`down`); regenerate `db/schema.rb` by running migrations, never edit it by hand.
+- Always use **strong parameters** in controllers (private `*_params` with `params.expect(...)`); never permit bare hashes.
+- Prefer `bin/rails generate` (models, migrations, controllers) over hand-writing boilerplate, then trim what you don't need.
+- Wrap each record's markup in `dom_id(record)` so Turbo Streams can target a single row without re-rendering the page.
+- Keep the schema **scoped to the todo app** — do not import models, migrations, or tables from other projects.
+- Write tests with **Minitest** under `test/` (this project does not use RSpec). Run them with `bin/rails test`.
+- Do **not** add new gems without explicit approval; the Gemfile is intentionally minimal.

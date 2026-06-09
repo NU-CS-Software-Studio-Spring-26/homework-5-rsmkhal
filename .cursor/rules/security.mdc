@@ -1,0 +1,13 @@
+---
+description: Security rules for the sample todo app
+alwaysApply: true
+---
+
+# Security rules for the sample todo app
+
+- **Never write, log, or echo secrets, API keys, or production credentials.** No printing `ENV` secrets, `Rails.application.credentials`, or `config/master.key` anywhere (code, logs, comments, or chat).
+- **Never call `eval`, `instance_eval`, `send`/`public_send`, or `constantize` on user input.** Do not build code or method names from `params`.
+- **Never call `html_safe` or `raw` (or `<%==`) on untrusted input.** Let ERB auto-escape; if you must build HTML, use `sanitize` with an allowlist.
+- **Use parameterized / Active Record queries — never string-interpolate SQL.** Use `where(id: params[:id])` or bind placeholders (`where("col = ?", value)`), never `where("col = #{params[:x]}")`.
+- **Do not disable Rails security defaults.** No `skip_before_action :verify_authenticity_token`, no turning off CSRF protection, no weakening mass-assignment protection (always use strong parameters), and do not bypass session/authentication checks.
+- Validate and constrain user input; prefer strong parameters and explicit allowlists over `permit!`.
